@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>Random Position App</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8IYO65Yx8s0_7bo7JngtiqkNxuvTF8xI"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <style>
+        #map {width:100%; height: 500px;}
+    </style>
+</head>
+
+<body>
+<div ng-controller="RandomPositionController">
+    <p>Latitude: {{position.lat}}</p>
+    <p>Longitude: {{position.lng}}</p>
+    <button ng-click="draw()">Start Drawing</button>
+    <button ng-click="stop()">Stop Drawing</button>
+    <br/><br/>
+</div>
+
+<div id="map" ng-controller="GoogleMapController"></div>
+</body>
+</html>
